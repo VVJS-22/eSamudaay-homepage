@@ -24,7 +24,7 @@ html {
 .search-container {
   height: 20vh;
   width: 100%;
-  background: url("/assets/udupi-cover.jpg") no-repeat;
+  background: url("./assets/udupi-cover.jpg") no-repeat;
   background-size: cover;
   background-position:  bottom -20px right;
   position: fixed;
