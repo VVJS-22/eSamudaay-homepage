@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esamudaay | Your neighbourhood's delivery App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cb137b9af1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="search-container">
+        <div class="search-bar">
+          <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input type="text" id="search" placeholder="Search eSamudaay" />
+        </div>
+        <div class="brand-location">
+          <div class="brand">
+            <div class="logo">
+              <i class="fab fa-slack"></i>
+            </div>
+            <div class="brand-name"><h4>eSamudaay</h4></div>
+          </div>
+          <div class="location">
+            <div class="location-wrapper">
+              <div class="logo-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="location-name">
+                <h5>Udupi</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-videos"></div>
+      <div class="slideshow"></div>
+      <div class="products-list"></div>
+      <div class="featured-products"></div>
+      <nav>
+        <div class="icons">
+          <a href="index.html" class="active">
+            <i class="fas fa-store"></i>
+            <p>STORES</p>
+          </a>
+        </div>
+        <div class="icons">
+          <a href="#" onclick="activeToggle(this);">
+            <i class="fas fa-shopping-bag"></i>
+            <p>ORDERS</p>
+          </a>
+        </div>
+        <div class="icons">
+          <a href="#" onclick="activeToggle(this);">
+            <i class="fas fa-shopping-cart"></i>
+            <p>CART</p>
+          </a>
+        </div>
+        <div class="icons">
+          <a href="#" onclick="activeToggle(this);">
+            <i class="far fa-user"></i>
+            <p>ACCOUNT</p>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
