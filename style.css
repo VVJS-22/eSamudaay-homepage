@@ -32,9 +32,6 @@ html {
   left: 0;  
 }
 
-.search-container > * {
-  z-index: 1;
-}
 
 .search-container::after {
   content: '';
@@ -43,7 +40,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -123,10 +120,25 @@ html {
   margin-bottom: auto;
 }
 
-.product-videos {
+.slide {
  margin-top: 20vh;
  height: 15vh;
  background: white;
+ display: flex;
+ flex-wrap: nowrap;
+ align-items: flex-start;
+ overflow: hidden;
+ cursor: grabbing;
+}
+
+
+
+.video-container video {
+  width: 12vh;
+  height: 12vh;
+  margin-top: 6px;
+  margin-left: 14px;
+  border-radius: 4px;
 }
 
 .slideshow {
@@ -166,6 +178,7 @@ nav a {
 nav a:hover, nav a:active, nav .active {
   color: #604f9e;
 } 
+
 
 nav i {
   font-size: 15px;
