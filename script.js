@@ -71,3 +71,25 @@ slider.addEventListener('mousemove', (e) => {
  const walk = x - startX;
  slider.scrollLeft = scrollLeft - walk;
 });
+
+slider.addEventListener('touchdown', (e) => {
+ isDown = true;
+ startX = e.pageX - slider.offsetLeft;
+ scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchup', () => {
+ isDown = flase;
+});
+
+slider.addEventListener('touchleave', () => {
+ isDown = false;
+})
+
+slider.addEventListener('touchmove', (e) => {
+ if (!isDown) return;
+ e.preventDefault();
+ const x = e.pageX - slider.offsetLeft;
+ const walk = x - startX;
+ slider.scrollLeft = scrollLeft - walk;
+});
