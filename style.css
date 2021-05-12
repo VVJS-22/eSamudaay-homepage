@@ -130,7 +130,7 @@ html {
   height: 18vh;
   display: flex;
   justify-content: flex-start;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   cursor:grabbing;
 }
