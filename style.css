@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
-
-
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -14,22 +12,21 @@ html {
 }
 
 .container {
- width: 100%;
- height: auto;
- /* overflow-x: hidden; */
+  width: 100%;
+  height: auto;
+  /* overflow-x: hidden; */
 }
 
 .search-container {
   height: 20vh;
   width: 100%;
-  background: url("./assets/udupi-cover.jpg") no-repeat;
+  background: url('./assets/udupi-cover.jpg') no-repeat;
   background-size: cover;
-  background-position:  bottom right;
+  background-position: bottom right;
   position: fixed;
   top: 0;
-  left: 0;  
+  left: 0;
 }
-
 
 .search-container::after {
   content: '';
@@ -113,16 +110,16 @@ html {
 }
 
 .location-name {
-  margin-left: 4px ;
+  margin-left: 4px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .product-videos {
- margin-top: 20vh;
- height: 18vh;
- width: 100%;
- background: white;
+  margin-top: 20vh;
+  height: 18vh;
+  width: 100%;
+  background: white;
 }
 
 .slide {
@@ -132,7 +129,16 @@ html {
   justify-content: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
-  cursor:grabbing;
+  cursor: grabbing;
+}
+
+.slide::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .slide-video {
@@ -150,17 +156,17 @@ html {
   }
 }
 
-.product-videos img, iframe {
+.product-videos img,
+iframe {
   width: 12vh;
   height: 12vh;
   border-radius: 4px;
 }
 
-
 .product-videos h6 {
   font-weight: 400;
   text-align: center;
-} 
+}
 
 .slideshow {
   height: 25vh;
@@ -168,27 +174,27 @@ html {
 }
 
 .products-list {
- height: 40vh;
- background: aquamarine;
+  height: 40vh;
+  background: aquamarine;
 }
 
 .featured-products {
- height: 70vh;
- background: #282828;
+  height: 70vh;
+  background: #282828;
 }
 
 nav {
- background: #f5f5f5;
- height: 8vh;
- width: 100%;
- position: fixed;
- right: 0;
- bottom: 0;
- z-index: 1;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 30px 20px 20px 20px;
+  background: #f5f5f5;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px 20px 20px;
 }
 
 nav a {
@@ -196,10 +202,11 @@ nav a {
   color: rgb(114, 111, 111);
 }
 
-nav a:hover, nav a:active, nav .active {
+nav a:hover,
+nav a:active,
+nav .active {
   color: #604f9e;
-} 
-
+}
 
 nav i {
   font-size: 15px;

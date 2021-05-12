@@ -43,3 +43,5 @@ searchBar.addEventListener('click', setBorder);
 
 let container = document.querySelector(".search-icon");
 container.addEventListener('click', removeBorder);
+
+
