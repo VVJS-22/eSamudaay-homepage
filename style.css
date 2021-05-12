@@ -64,13 +64,13 @@ html {
   color: #604f9e;
   font-size: 20px;
   font-weight: 100;
-  
 }
 
 .search-bar input {
   width: 100%;
   border: none;
   margin-left: 15px;
+  height: 20px;
   font-size: 14px;
   outline: none;
 }
@@ -130,8 +130,8 @@ html {
   height: 18vh;
   display: flex;
   justify-content: flex-start;
-  overflow-x: auto;
-  overflow-y: hidden;
+  /* overflow-x: auto; */
+  overflow: hidden;
   cursor:grabbing;
 }
 
@@ -150,11 +150,12 @@ html {
   }
 }
 
-.product-videos img {
+.product-videos img, iframe {
   width: 12vh;
   height: 12vh;
   border-radius: 4px;
 }
+
 
 .product-videos h6 {
   font-weight: 400;

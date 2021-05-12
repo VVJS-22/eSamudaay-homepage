@@ -1,5 +1,5 @@
 const activeToggle = (element) => {
- deactiveCurrent = document.querySelector(".active");
+ let deactiveCurrent = document.querySelector(".active");
  deactiveCurrent.classList.remove("active");
  element.classList.add("active");
 }
@@ -8,13 +8,13 @@ let search = false;
 
 const setBorder = () => {
  if (search  === false) {
-  element = document.querySelector(".search-bar");
+  let element = document.querySelector(".search-bar");
   element.classList.add("selected");
 
-  searchIcon = document.querySelector(".fas.fa-search");
-  backIcon  = document.createElement("i");
+  let searchIcon = document.querySelector(".fas.fa-search");
+  let backIcon  = document.createElement("i");
   backIcon.setAttribute("class","fas fa-chevron-left");
-  searchIconDiv = document.querySelector(".search-icon");
+  let searchIconDiv = document.querySelector(".search-icon");
   searchIconDiv.removeChild(searchIcon);
   searchIconDiv.appendChild(backIcon);
   
@@ -24,13 +24,13 @@ const setBorder = () => {
 
 const removeBorder = (event) => {
  if (search === true) {
- element = document.querySelector(".search-bar");
+ let element = document.querySelector(".search-bar");
  element.classList.remove("selected");
-
- backIcon = document.querySelector(".fas.fa-chevron-left");
- searchIcon  = document.createElement("i");
+ 
+ let backIcon = document.querySelector(".fas.fa-chevron-left");
+ let searchIcon  = document.createElement("i");
  searchIcon.setAttribute("class","fas fa-search");
- searchIconDiv = document.querySelector(".search-icon");
+ let searchIconDiv = document.querySelector(".search-icon");
  searchIconDiv.removeChild(backIcon);
  searchIconDiv.appendChild(searchIcon);
  event.stopPropagation();
@@ -38,8 +38,36 @@ const removeBorder = (event) => {
  }
 }
 
-searchBar = document.querySelector("#search");
+let searchBar = document.querySelector("#search");
 searchBar.addEventListener('click', setBorder);
 
-container = document.querySelector(".search-icon");
+let container = document.querySelector(".search-icon");
 container.addEventListener('click', removeBorder);
+
+
+let slider = document.querySelector(".slide");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+ isDown = true;
+ startX = e.pageX - slider.offsetLeft;
+ scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseup', () => {
+ isDown = flase;
+});
+
+slider.addEventListener('mouseleave', () => {
+ isDown = false;
+})
+
+slider.addEventListener('mousemove', (e) => {
+ if (!isDown) return;
+ e.preventDefault();
+ const x = e.pageX - slider.offsetLeft;
+ const walk = x - startX;
+ slider.scrollLeft = scrollLeft - walk;
+});
